@@ -8,5 +8,5 @@ Now this may look like a camera mod, but it isn't. It is a portable mirror!
 Change your mirror's FOV from 160 FOV to 30 FOV!
 ### Option 2: NEAR CLIP
 Change your mirror's Near Clip from 1 to 0.1!
-### Option 3: Quality [NOT FUNCTIONAL CURRENTLY]
+### Option 3: Quality
 Change your mirror's quality!
