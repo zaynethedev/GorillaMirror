@@ -1,5 +1,5 @@
 # GorillaMirror
-![image](https://github.com/user-attachments/assets/86b52272-c85a-46de-b424-a4567e3f5055)
+![image](https://github.com/user-attachments/assets/b9ff1193-c18c-433b-9791-c02b26073e36)
 GorillaMirror is a mod for the game Gorilla Tag, adding a mirror with customizable FOV, clipping, and quality.
 Now this may look like a camera mod, but it isn't. It is a portable mirror!
 
