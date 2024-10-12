@@ -50,20 +50,22 @@ namespace GorillaMirror
             gorillaMirror = Instantiate(asset);
             fovText = gorillaMirror.transform.Find("Handle/FOVTEXT").gameObject.GetComponent<TextMeshPro>();
             nearClipText = gorillaMirror.transform.Find("Handle/NEARCLIPTEXT").gameObject.GetComponent<TextMeshPro>();
-            qualityText = gorillaMirror.transform.Find("Handle/QUALITYTEXT").gameObject.GetComponent<TextMeshPro>();
             gorillaMirror.transform.Find("Handle/VersionText").gameObject.GetComponent<TextMeshPro>().text = $"GorillaMirror v{PluginInfo.Version}";
             mirrorCamera = gorillaMirror.transform.Find("Handle/Camera").gameObject.GetComponent<Camera>();
             gorillaMirror.transform.Find("Handle/UPFOV").gameObject.AddComponent<ButtonManager>(); gorillaMirror.transform.Find("Handle/DOWNFOV").gameObject.AddComponent<ButtonManager>();
             gorillaMirror.transform.Find("Handle/NEARUP").gameObject.AddComponent<ButtonManager>(); gorillaMirror.transform.Find("Handle/NEARDOWN").gameObject.AddComponent<ButtonManager>();
-            gorillaMirror.transform.Find("Handle/QUALITYUP").gameObject.AddComponent<ButtonManager>(); gorillaMirror.transform.Find("Handle/QUALITYDOWN").gameObject.AddComponent<ButtonManager>();
             gorillaMirror.transform.Find("Handle").AddComponent<DevHoldable>();
             gorillaMirror.transform.Find("Handle").gameObject.layer = 18;
             gorillaMirror.transform.localScale = new Vector3(0.15f, 0.15f, -0.15f);
             gorillaMirror.transform.position = new Vector3(-65, 12, -82);
         }
 
-        void Update()
+        public void Update()
         {
+            System.DateTime currentTime = System.DateTime.Now;
+            string timeFormat = currentTime.ToString("hh:mm:ss tt").Replace(" ", "/");
+            string dateFormat = currentTime.ToString("MM-dd-yy");
+            gorillaMirror.transform.Find("Handle/ClockText").gameObject.GetComponent<TextMeshPro>().text = $"{timeFormat} - {dateFormat}";
         }
 
         [ModdedGamemodeJoin]

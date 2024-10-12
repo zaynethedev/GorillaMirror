@@ -7,6 +7,6 @@
     {
         public const string GUID = "com.zaynethedev.gorillatag.gorillamirror";
         public const string Name = "GorillaMirror";
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.1";
     }
 }
